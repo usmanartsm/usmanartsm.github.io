@@ -14,90 +14,60 @@ With strong expertise in electronics design, firmware engineering, and full-stac
 My experience spans C++ system development, ESP32/STM32 firmware, industrial IoT deployment, and cloud-integrated monitoring systems.
 
 🚀 Core Expertise
+======
 Embedded & Firmware Engineering
-
-ESP32 / STM32 Firmware Development
-
-FreeRTOS & Bare-metal Programming
-
-RS232 / RS485 / Modbus RTU / Modbus TCP
-
-Ethernet & GSM (SIMCOM) Communication
-
-LoRa & Industrial Sensor Integration
-
-OTA Firmware Architecture
-
-Production-ready Industrial Data Logger Systems
-
+======
+- ESP32 / STM32 Firmware Development
+- FreeRTOS & Bare-metal Programming
+- RS232 / RS485 / Modbus RTU / Modbus TCP
+- Ethernet & GSM (SIMCOM) Communication
+- LoRa & Industrial Sensor Integration
+- OTA Firmware Architecture
+- Production-ready Industrial Data Logger Systems
 I build firmware optimized for stability, field deployment, and long-term scalability.
 
 Industrial IoT System Development
-
-End-to-End IoT Architecture (Device → Gateway → Cloud)
-
-ThingsBoard Integration
-
-Raspberry Pi Gateway Systems
-
-MQTT / REST API / Real-time Data Systems
-
-Fleet Monitoring & Fuel Management Systems
-
-Slope Stability Monitoring Systems
-
-Industrial Automation & Energy Monitoring
-
+======
+- End-to-End IoT Architecture (Device → Gateway → Cloud)
+- ThingsBoard Integration
+- Raspberry Pi Gateway Systems
+- MQTT / REST API / Real-time Data Systems
+- Fleet Monitoring & Fuel Management Systems
+- Slope Stability Monitoring Systems
+- Industrial Automation & Energy Monitoring
 I deliver complete IoT ecosystems — hardware, firmware, backend, and dashboard.
 
 High-Performance Desktop Software (C++)
-
-Cross-platform Trading Applications (Windows, Linux, macOS)
-
-Real-time Market Data Processing via Redis
-
-Transaction Engine Development (Buy / Sell / Amend / GTC)
-
-TradingView WebView Integration
-
-Microsoft Store (MSIX) & macOS App Store Deployment
-
-Focused on performance-critical, real-time systems.
+======
+- Cross-platform Trading Applications (Windows, Linux, macOS)
+- Real-time Market Data Processing via Redis
+- Transaction Engine Development (Buy / Sell / Amend / GTC)
+- TradingView WebView Integration
+- Microsoft Store (MSIX) & macOS App Store Deployment
+- Focused on performance-critical, real-time systems.
 
 💼 Major Projects & Professional Experience
+======
 📊 Cross-Platform Stock Trading Desktop Application
-
+======
 PT Investrend Infotama Indonesia
-
-Developed a high-performance stock trading desktop application using C++ running on Windows, Linux, and macOS.
-
+- Developed a high-performance stock trading desktop application using C++ running on Windows, Linux, and macOS.
 Key Contributions:
-
-Real-time running trade data integration via Redis / IDX service
-
-Transaction widget engine (buy, sell, amend, withdraw, GTC)
-
-TradingView chart integration via WebView
-
-Cross-platform packaging (MSIX & macOS App Store submission)
-
+- Real-time running trade data integration via Redis / IDX service
+- Transaction widget engine (buy, sell, amend, withdraw, GTC)
+- TradingView chart integration via WebView
+- Cross-platform packaging (MSIX & macOS App Store submission)
 This system handles real-time financial market data in production.
 
 ⛽ Fuel Management System (Industrial IoT)
-
+======
 PT Harmoni Panca Utama
-
-Designed and developed a Fuel Monitoring System using:
-
-HID RFID Nozzle System
-
-Raspberry Pi 4 as IoT Gateway
-
-Laravel Web Dashboard
-
-Real-time data logging
-
-Integrated hardware control with cloud-based reporting system.
+- Designed and developed a Fuel Monitoring System using:
+- HID RFID Nozzle System
+- Raspberry Pi 4 as IoT Gateway
+- Laravel Web Dashboard
+- Real-time data logging
+- Integrated hardware control with cloud-based reporting system.
 
 🚛 Fleet Management System for Mining Truck (DT Truck PIT Service)
 
