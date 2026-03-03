@@ -7,7 +7,7 @@ tags:
   - Firmware Engineering
   - Hardware Design
 ---
-
+![DPV Robot Controller 2015](/images/dpv robot.jpg)
 Back in 2015, long before IoT and embedded systems became my professional focus, I designed and built a custom controller for a DPV (Diver Propulsion Vehicle) robot.
 
 At that time, this wasn’t just a school experiment or hobby project. It was a real engineering challenge that required me to think about power safety, reliability, and real-world deployment.
