@@ -1,68 +1,148 @@
 ---
-title: "How to Read Temperature and Humidity Sensor AGH3485 Using Modbus Poll"
+title: "ASAIR AGH3485 Temperature Sensor RS485 – Datasheet and Modbus Communication Guide"
+collection: publications
+category: technical-reference
+permalink: /publication/asair-agh3485-datasheet-modbus-guide
+excerpt: 'Complete datasheet reference and Modbus communication guide for the ASAIR AGH3485 RS485 temperature sensor, including register map, baudrate configuration, and slave ID settings.'
 date: 2026-03-05
-slug: read-agh3485-modbus-poll-rs485-temperature-humidity
-categories:
-  - industrial-iot
-tags:
-  - modbus
-  - rs485
-  - industrial-sensor
-  - humidity-sensor
-  - temperature-sensor
-  - modbus-poll
-  - agh3485
+venue: 'Technical Documentation'
+paperurl: '/files/datasheet/usmantsmz-Temperature-and-humidity-transmitter（RS485）-Oct-2025.pdf'
+citation: 'Usman AR TSM. (2026). "ASAIR AGH3485 Temperature Sensor RS485 – Datasheet and Modbus Communication Guide." Technical Documentation.'
 ---
 
-Industrial sensors commonly use **RS485 Modbus RTU communication** because of its reliability and simplicity in industrial environments. One of the commonly used devices is the **ASAIR AGH3485 temperature and humidity transmitter**.
+ASAIR AGH3485 Temperature Sensor – Datasheet & Modbus Guide
 
-In this tutorial, I will explain step-by-step how to:
+The ASAIR AGH3485 is an industrial-grade temperature sensor that uses RS485 communication with the Modbus RTU protocol.
+This sensor is commonly used in industrial monitoring systems, IoT environmental monitoring, cold storage systems, and building automation.
 
-- Read temperature and humidity data
-- Identify the baud rate used by the sensor
-- Change the Modbus Slave ID
-- Change the baud rate
+This publication provides a reference to the original datasheet along with practical notes for reading sensor data using Modbus tools such as Modbus Poll.
 
-using the popular industrial testing software **Modbus Poll**.
+Sensor Overview
 
-This tutorial is useful for **IoT engineers, automation engineers, and embedded developers** working with **RS485 industrial sensors**.
+Key features of the AGH3485:
 
----
+Industrial RS485 Modbus RTU interface
 
-# Sensor Overview
+High accuracy temperature measurement
 
-The **AGH3485** is a digital temperature and humidity transmitter that communicates using **Modbus RTU over RS485**.
+Long distance communication (up to ~1200 m over RS485)
 
-Typical applications include:
+Configurable Slave ID
 
-- Environmental monitoring
-- Industrial automation
-- Smart agriculture
-- Data logging systems
-- IoT weather stations
+Configurable baudrate
 
-Main features:
+Suitable for industrial automation and IoT systems
 
-| Parameter | Value |
-|--------|--------|
-Temperature range | -40°C to 60°C |
-Humidity range | 0 – 99.9% RH |
-Protocol | Modbus RTU |
-Interface | RS485 |
-Default Baudrate | 9600 |
-Default Slave ID | 1 |
+Typical applications:
 
----
+Cold storage monitoring
 
-# Hardware Connection
+Industrial environmental monitoring
 
-The sensor uses a **4-wire connection**:
+Smart agriculture systems
 
-| Wire Color | Function |
-|-----------|-----------|
-Red | Power +12V to +32V |
-Black | Ground |
-Yellow | RS485 A+ |
-White | RS485 B- |
+IoT data logger devices
 
-Typical connection:
+Default Communication Settings
+
+Typical factory configuration:
+
+Parameter	Value
+Protocol	Modbus RTU
+Interface	RS485
+Default Baudrate	9600
+Data Format	8N1
+Default Slave ID	1
+Reading Temperature Data
+
+Temperature can be read using Modbus holding registers.
+
+Example:
+
+Register Address	Description
+0x0000	Temperature value
+
+The value returned is typically scaled by 10.
+
+Example:
+
+Register Value : 253
+Actual Temperature = 25.3 °C
+Reading Sensor Data Using Modbus Poll
+
+Using Modbus Poll:
+
+Connect the sensor via USB-RS485 converter
+
+Open Modbus Poll
+
+Configure serial port
+
+Example settings:
+
+Baudrate : 9600
+Data Bits : 8
+Parity : None
+Stop Bits : 1
+Slave ID : 1
+
+Then read:
+
+Function : 03 Read Holding Registers
+Address  : 0
+Length   : 1
+Changing Slave ID
+
+To change the slave ID:
+
+Write to the Slave ID configuration register
+
+Use Modbus function 06 (Write Single Register)
+
+Example:
+
+Register : 0x0001
+Value    : 2
+
+Sensor will restart with the new address.
+
+Changing Baudrate
+
+Baudrate configuration can also be modified via Modbus register.
+
+Typical baudrate options:
+
+Value	Baudrate
+0	2400
+1	4800
+2	9600
+3	19200
+
+After changing the value, restart the sensor.
+
+Datasheet Download
+
+Full datasheet can be downloaded here:
+
+📄 /files/datasheet/asair-agh3485-datasheet.pdf
+
+Practical Notes
+
+During testing, the sensor works well with:
+
+Industrial data loggers
+
+PLC systems
+
+Microcontrollers such as ESP32
+
+RS485 to USB converters
+
+The sensor is especially suitable for low-power remote monitoring devices and IoT telemetry systems.
+
+Citation
+
+If you reference this documentation, please cite:
+
+Usman AR TSM. (2026).
+ASAIR AGH3485 Temperature Sensor RS485 – Datasheet and Modbus Communication Guide.
